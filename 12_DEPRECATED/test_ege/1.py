@@ -6,4 +6,4 @@ def func(n):
 
 
 print(func("1" * 45 + "2" * 45))
-# 12
+# 12_DEPRECATED
