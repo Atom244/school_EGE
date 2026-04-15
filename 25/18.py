@@ -1,5 +1,3 @@
-def prime(x):
-    return x>1 and all([x%i!=0 for i in range(2,int(x**0.5)+1)])
 def fact(x):
     d = []
     i = 2
@@ -10,8 +8,7 @@ def fact(x):
         i += 1
     if x > 1: d.append(x)
     return d
-
-print(fact(30))
-for i in range(1,100):
-    if len(fact(i))==3 and i%5==0:
-        print(i)
+for x in range(9_876_543_20, 9_876_000_00, -1):
+    d = fact(x)
+    if '1' in str(sum(d)) and len(d) == 13:
+        print(x, max(d))

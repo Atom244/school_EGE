@@ -1,5 +1,3 @@
-def prime(x):
-    return x>1 and all([x%i!=0 for i in range(2,int(x**0.5)+1)])
 def fact(x):
     d = []
     i = 2
@@ -10,8 +8,9 @@ def fact(x):
         i += 1
     if x > 1: d.append(x)
     return d
-
-print(fact(30))
-for i in range(1,100):
-    if len(fact(i))==3 and i%5==0:
-        print(i)
+for x in range(2_700_001,2_800_000):
+    if x%100 == 34:
+        d = fact(x)
+        povt = [x for x in d if d.count(x)>=5]
+        if povt:
+            print(x,min(povt))

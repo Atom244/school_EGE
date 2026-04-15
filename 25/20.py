@@ -10,8 +10,7 @@ def fact(x):
         i += 1
     if x > 1: d.append(x)
     return d
+for x in range(102,112):
+    if prime(x):
+        print(x**4, x**3)
 
-print(fact(30))
-for i in range(1,100):
-    if len(fact(i))==3 and i%5==0:
-        print(i)
